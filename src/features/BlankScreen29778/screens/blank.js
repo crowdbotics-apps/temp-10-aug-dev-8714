@@ -27,7 +27,9 @@ export class _Blank extends React.Component {
     Input_3: "",
     Input_4: "",
     Input_5: "",
-    Input_6: ""
+    Input_6: "",
+    Radio_4: true,
+    CheckBox_5: true
   }
 
   render = () => (
@@ -78,7 +80,7 @@ export class _Blank extends React.Component {
           paddingTop: 5,
           paddingBottom: 5,
           overflow: "visible",
-          textAlign: "left",
+          textAlign: "right",
           verticalAlign: "baseline",
           fontSize: 12,
           color: "#000000",
@@ -103,7 +105,7 @@ export class _Blank extends React.Component {
       <Input
         placeholder="Sample text input placeholder"
         editable={true}
-        textStyle={{ fontSize: 12, color: "#000000", textAlign: "left" }}
+        textStyle={{ fontSize: 12, color: "#000000", textAlign: "center" }}
         style={{
           width: "100%",
           marginLeft: 0,
@@ -115,7 +117,7 @@ export class _Blank extends React.Component {
           paddingTop: 5,
           paddingBottom: 5,
           overflow: "visible",
-          textAlign: "left",
+          textAlign: "center",
           verticalAlign: "baseline",
           fontSize: 12,
           color: "#000000",
@@ -140,7 +142,7 @@ export class _Blank extends React.Component {
       <Input
         placeholder="Sample text input placeholder"
         editable={true}
-        textStyle={{ fontSize: 12, color: "#000000", textAlign: "left" }}
+        textStyle={{ fontSize: 12, color: "#000000", textAlign: "right" }}
         style={{
           width: "100%",
           marginLeft: 0,
@@ -152,7 +154,7 @@ export class _Blank extends React.Component {
           paddingTop: 5,
           paddingBottom: 5,
           overflow: "visible",
-          textAlign: "left",
+          textAlign: "right",
           verticalAlign: "baseline",
           fontSize: 12,
           color: "#000000",
@@ -178,7 +180,7 @@ export class _Blank extends React.Component {
         placeholder="Number Input Placeholder"
         editable={true}
         keyboardType="numeric"
-        textStyle={{ fontSize: 12, color: "#000000", textAlign: "left" }}
+        textStyle={{ fontSize: 12, color: "#000000", textAlign: "center" }}
         style={{
           width: "100%",
           marginLeft: 0,
@@ -190,7 +192,7 @@ export class _Blank extends React.Component {
           paddingTop: 5,
           paddingBottom: 5,
           overflow: "visible",
-          textAlign: "left",
+          textAlign: "center",
           verticalAlign: "baseline",
           fontSize: 12,
           color: "#000000",
@@ -220,7 +222,7 @@ export class _Blank extends React.Component {
           height: 100,
           fontSize: 12,
           color: "#000000",
-          textAlign: "left"
+          textAlign: "right"
         }}
         style={{
           width: "100%",
@@ -233,7 +235,7 @@ export class _Blank extends React.Component {
           paddingTop: 5,
           paddingBottom: 5,
           overflow: "visible",
-          textAlign: "left",
+          textAlign: "right",
           verticalAlign: "baseline",
           fontSize: 12,
           color: "#000000",
@@ -294,7 +296,7 @@ export class _Blank extends React.Component {
           paddingTop: 5,
           paddingBottom: 5,
           overflow: "visible",
-          textAlign: "left",
+          textAlign: "right",
           verticalAlign: "baseline",
           fontSize: 12,
           color: "#000000",
@@ -316,6 +318,173 @@ export class _Blank extends React.Component {
       >
         Sample text content
       </Text>
+      <Button
+        style={{
+          width: "100%",
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
+          textAlign: "center",
+          verticalAlign: "baseline",
+          fontSize: 12,
+          color: "#000000",
+          backgroundColor: "#3366FF",
+          fontFamily: "Roboto-Regular",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderRadius: 0,
+          textDecorationLine: "none",
+          textTransform: "none",
+          lineHeight: 12,
+          letterSpacing: 0
+        }}
+        onPress={() => alert("Pressed!")}
+      >
+        Press me!
+      </Button>
+      <Icon
+        iconFont="Eva Design Icons"
+        name="star"
+        width={20}
+        height={20}
+        style={{
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
+          textAlign: "left",
+          verticalAlign: "baseline",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderRadius: 0,
+          fontSize: 20,
+          color: "#000000",
+          backgroundColor: "#ffffff",
+          fontFamily: "Roboto-Regular",
+          textDecorationLine: "none",
+          textTransform: "none",
+          lineHeight: 12,
+          letterSpacing: 0
+        }}
+      />
+      <Radio
+        text="Radio button"
+        disabled={false}
+        style={{
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
+          textAlign: "left",
+          verticalAlign: "baseline",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderRadius: 0,
+          textDecorationLine: "none",
+          textTransform: "none",
+          lineHeight: 12,
+          letterSpacing: 0
+        }}
+        checked={this.state.Radio_4}
+        onChange={nextChecked => this.setState({ Radio_4: nextChecked })}
+      />
+      <CheckBox
+        text="Checkbox"
+        disabled={false}
+        style={{
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
+          textAlign: "left",
+          verticalAlign: "baseline",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderRadius: 0,
+          textDecorationLine: "none",
+          textTransform: "none",
+          lineHeight: 12,
+          letterSpacing: 0
+        }}
+        checked={this.state.CheckBox_5}
+        onChange={nextChecked => this.setState({ CheckBox_5: nextChecked })}
+      />
+      <Button
+        style={{
+          width: "100%",
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
+          textAlign: "center",
+          verticalAlign: "baseline",
+          fontSize: 12,
+          color: "#000000",
+          backgroundColor: "#3366FF",
+          fontFamily: "Roboto-Regular",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderRadius: 0,
+          textDecorationLine: "none",
+          textTransform: "none",
+          lineHeight: 12,
+          letterSpacing: 0
+        }}
+        onPress={() => alert("Pressed!")}
+      >
+        Press me!
+      </Button>
     </View>
   )
 }
